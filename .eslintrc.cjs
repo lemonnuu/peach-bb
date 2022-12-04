@@ -10,5 +10,9 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion: 'latest'
+  },
+  rules: {
+    'semi': [2, 'never'], // 分号, never -> 不使用分号, always -> 使用分号
+    'quotes': [2, 'single'], // 引号, single -> 单引号, double -> 双引号
   }
 }
