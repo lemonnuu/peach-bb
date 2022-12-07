@@ -1,0 +1,12 @@
+// 文字两端线：   ---  文字  ---
+@mixin end-line($line-width, $line-thickness, $line-color, $margin-lr) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::before, &::after{
+    content: '';
+    width: $line-width;
+    border-bottom: $line-thickness solid $line-color;
+    margin: 0 $margin-lr;
+  }
+}

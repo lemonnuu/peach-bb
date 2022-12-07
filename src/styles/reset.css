@@ -49,6 +49,19 @@ table {
 	src: url(../assets/font/custom.ttf);
 }
 
-html {
+:root {
 	font-family: custom;
+	--header-bg-color: rgba(255, 255, 255, 0.7);
+	--shadow-color: #ccc;
+	--card-bg-color: #fff;
 }
+
+:root.dark {
+	--header-bg-color: rgba(26, 26, 26, 0.7);
+	--shadow-color: #3c3c3c;
+	--card-bg-color: #242424;
+}
+
+/* :root.dark {
+	--el-color-primary: pink
+} */

@@ -7,15 +7,26 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Card: typeof import('./src/components/atom/Card.vue')['default']
+    CustomFooter: typeof import('./src/components/structure/CustomFooter.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElCard: typeof import('element-plus/es')['ElCard']
+    ElCol: typeof import('element-plus/es')['ElCol']
     ElContainer: typeof import('element-plus/es')['ElContainer']
     ElFooter: typeof import('element-plus/es')['ElFooter']
     ElHeader: typeof import('element-plus/es')['ElHeader']
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElMain: typeof import('element-plus/es')['ElMain']
+    ElRow: typeof import('element-plus/es')['ElRow']
+    ElSkeleton: typeof import('element-plus/es')['ElSkeleton']
+    ElSkeletonItem: typeof import('element-plus/es')['ElSkeletonItem']
     ElSwitch: typeof import('element-plus/es')['ElSwitch']
+    Footer: typeof import('./src/components/structure/Footer.vue')['default']
+    Header: typeof import('./src/components/structure/Header.vue')['default']
     Hh: typeof import('./src/components/icons/hh.vue')['default']
     IcBaselineLightMode: typeof import('./src/components/icons/IcBaselineLightMode.vue')['default']
+    InfoCard: typeof import('./src/components/atom/InfoCard.vue')['default']
+    NavHeader: typeof import('./src/components/structure/NavHeader.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

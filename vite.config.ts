@@ -7,18 +7,23 @@ import { defineConfig } from 'vite' // defineConfig, 工具函数, 可以不用 
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
+  resolve: {
+    alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: { additionalData: '@use "@/styles/index.scss" as *;' },
+    },
+  },
   plugins: [
     vue(),
     AutoImport({ // element plus 自动导入插件
       resolvers: [ElementPlusResolver()],
     }),
     Components({ // element plus 自动导入插件
-      resolvers: [ElementPlusResolver()],
+      resolvers: [
+        ElementPlusResolver({ importStyle: 'sass' }),
+      ],
     }),
   ],
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
-  }
 })
